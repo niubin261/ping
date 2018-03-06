@@ -7,7 +7,10 @@ __author__ = 'niubin'
 
 import matplotlib.pyplot as plt
 import numpy as np
+import sys
+import argparse
 results = []
+
 filename = './ping2'
 def preprocessing(filename):
     fr = open(filename)
@@ -28,6 +31,10 @@ def readTime(line):
 
 if __name__ == '__main__':
 
+    if len(sys.argv) < 2 :
+        print "filename is needed"
+    else :
+        filename = sys.argv[1]
     y = preprocessing(filename)
 
     x = np.arange(0,len(y) )
