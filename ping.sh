@@ -15,9 +15,9 @@ var=1
 
 while [ $var -eq 1 ]
 do
-    #echo "test"
+
     date >> $1
-    ping -c 1 $2 >> $1
-    sleep 1s
+    ping -c 4 $2 >> $1
+    sleep 4s
 
 done
